@@ -27,8 +27,8 @@ public class PlayerProperties : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(ReduceOxygen());
-        StartCoroutine(ReduceHungerStatus());
+        //StartCoroutine(ReduceOxygen());
+        //StartCoroutine(ReduceHungerStatus());
     }
 
     private void Update()

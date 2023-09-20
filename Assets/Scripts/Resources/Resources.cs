@@ -5,24 +5,16 @@ using UnityEngine;
 
 namespace resources
 {
-    public interface Resources
+    public interface IResources
     {
         public enum ResourcesTypes
         {
-            oxygen, 
+            Oxygen, 
         }
 
         public float Health { get; set; }
         public float Amount { get; set; }
 
         IEnumerator ReduceOxygen();
-
-        //public static void InstantiateResources(Resources resourceses, Resources resources, GameObject resourcesObject)
-        //{
-        //    resourceses.amount = resources.amount;
-        //    resourceses.health = resources.health;
-
-        //    IEnumerator ReduceOxygen();
-        //}
     }
 }

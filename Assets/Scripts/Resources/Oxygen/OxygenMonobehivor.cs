@@ -4,26 +4,18 @@ using UnityEngine;
 
 namespace resources
 {
-    public class OxygenMonobehivor : MonoBehaviour
+    public class OxygenMonobehivor : IResources
     {
-        //private void Start()
-        //{
-        //    StartCoroutine(ReduceOxygen());
-        //}
-
-        private void Update()
+        public float Health { get; set; }
+        public float Amount { get; set; }
+        
+        public IEnumerator ReduceOxygen()
         {
-            //Resources.ResourcesTypes.oxygen = OxygenData.;
-
-            Debug.Log(Resources.ResourcesTypes.oxygen);
-        }
-
-        IEnumerator ReduceOxygen(Resources resources)
-        {
-            while (resources.Amount > 0)
+            while (Amount > 0)
             {
+                Debug.Log("|s");
                 yield return new WaitForSeconds(1);
-                resources.Amount -= 5.0f;
+                Amount -= 5.0f;
             }
         }
     }
