@@ -15,6 +15,6 @@ namespace resources
         public float Health { get; set; }
         public float Amount { get; set; }
 
-        IEnumerator ReduceOxygen();
+        void ReduceOxygen();
     }
 }

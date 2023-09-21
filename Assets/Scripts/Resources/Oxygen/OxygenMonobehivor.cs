@@ -9,14 +9,12 @@ namespace resources
         public float Health { get; set; }
         public float Amount { get; set; }
         
-        public IEnumerator ReduceOxygen()
+        public void ReduceOxygen()
         {
-            while (Amount > 0)
-            {
-                Debug.Log("|s");
-                yield return new WaitForSeconds(1);
-                Amount -= 5.0f;
-            }
+            Health = 5f;
+            Amount = 12f;
+            Debug.Log(Health);
+            Debug.Log(Amount);
         }
     }
 }
